@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner')
+
 class Casting
 
   attr_accessor :movie_id, :star_id, :fee
@@ -8,6 +10,6 @@ class Casting
     @movie_id = options['movie_id']
     @star_id = options['star_id']
     @fee = options['fee']
-
   end
+
 end
