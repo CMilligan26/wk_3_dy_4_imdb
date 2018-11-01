@@ -6,7 +6,7 @@ require('./models/casting')
 Star.delete_all
 Movie.delete_all
 
-movie1 = Movie.new({'title' => 'Titanic', 'genre' => 'romantic comedy'})
+movie1 = Movie.new({'title' => 'Titanic', 'genre' => 'romantic comedy', 'budget' => 50})
 
 star1 = Star.new({'first_name' => 'Kate', 'last_name' => 'Winslet'})
 
@@ -25,7 +25,7 @@ star2.save()
 # star1.delete
 
 movie1.save
-p movie1
+# p movie1
 casting1 = Casting.new({'movie_id' => movie1.id, 'star_id' => star1.id, 'fee' => 20})
 # binding.pry
 # movie1.title = "Inception"
@@ -36,6 +36,8 @@ casting1 = Casting.new({'movie_id' => movie1.id, 'star_id' => star1.id, 'fee' =>
 # movie1.delete
 
 casting1.save()
-casting1.fee = "30"
-casting1.star_id = star2.id
-casting1.update
+# casting1.fee = "30"
+# casting1.star_id = star2.id
+# casting1.update
+
+p movie1.remaining_budget()

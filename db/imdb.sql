@@ -5,7 +5,8 @@ DROP TABLE stars;
 CREATE TABLE movies (
   id SERIAL4 PRIMARY KEY,
   title TEXT,
-  genre TEXT
+  genre TEXT,
+  budget INT4
 );
 
 CREATE TABLE stars (
